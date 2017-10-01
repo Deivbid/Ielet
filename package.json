@@ -1,0 +1,26 @@
+{
+  "name": "ielet",
+  "version": "1.0.0",
+  "description": "Pagina web desarrollada con Wordpress para una iglesia evangélica",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0",
+    "popper.js": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deivbid/Ielet.git"
+  },
+  "author": "CAL\u001b[3~",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deivbid/Ielet/issues"
+  },
+  "homepage": "https://github.com/Deivbid/Ielet#readme"
+}
