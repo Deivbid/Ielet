@@ -14,16 +14,7 @@
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
-			  <div class="collapse navbar-collapse" id="navbarNav">
-			  <?php
-				  wp_nav_menu( array(
-						'theme_location' 	=>	'menu_principal',
-						'container_class'	=>	'collapse navbar-collapse',
-						'container_id'		=>	'navbar',
-						'menu_class' 		=>	'navbar-nav'
-					) );
-			  ?>
-			  <!--
+			  <!--<div class="collapse navbar-collapse" id="navbarNav">
 			    <ul class="navbar-nav">
 			      <li class="nav-item active">
 			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -37,24 +28,20 @@
 			      <li class="nav-item">
 			        <a class="nav-link disabled" href="#">Disabled</a>
 			      </li>
-			    </ul>-->
-			  </div>
+			    </ul>
+			  </div> -->
+
+			  <?php 
+			  	wp_nav_menu( array(
+			  		'theme_location'	=>	'menu_principal',
+			  		'container'			=>	'div',
+			  		'container_class'	=>	'collapse navbar-collapse',
+			  		'container_id'		=>	'navbarNav',
+			  		'menu_class'		=>	'navbar-nav',
+			  		'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                	'walker'            => new WP_Bootstrap_Navwalker()
+                	));
+			   ?>
 			</nav>
-
-			<?php 
-				/*wp_nav_menu( array(
-					'theme_location'  => 'menu_principal',
-					'container'       => 'nav',
-					'container_id'    => 'navbar',
-					'container_class' => 'navbar navbar-expand-lg navbar-light bg-light', 
-					'menu_ class' 	  => 'navbar-nav'));
-
-				wp_nav_menu( array(
-					'theme_location' 	=>	'menu_principal',
-					'container_class'	=>	'collapse navbar-collapse',
-					'container_id'		=>	'navbar',
-					'menu_class' 		=>	'nav navbar-nav navbar-right'
-				) );*/
-			 ?>
 		</header>
 		

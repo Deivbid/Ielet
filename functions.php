@@ -25,10 +25,16 @@
 	add_action( 'wp_enqueue_scripts', 'church_styles');
 	add_action( 'wp_enqueue_scripts', 'church_script');
 
+
+	// Register Custom Navigation Walker
+	require_once('class-wp-bootstrap-navwalker.php');
+
 	/** NAVEGACION **/
 	register_nav_menus([
 
 			'menu_principal' => __("Menu principal", 'iglesia')
 
 		]);
+
+
 ?>
