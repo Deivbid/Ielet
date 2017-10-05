@@ -33,10 +33,12 @@
 
 			<div class="container">
         		<div class="brand">
-        			<h1>Iglesia Evangelica Libre El Trigal - Valencia  &dagger;</h1>
+        			<?php $descripcion = get_bloginfo('description', 'display'); ?>
+        			<h1><?php echo $descripcion ?> &dagger;</h1>
         		</div>
         	</div>
 		</header>
+		
 
 
 		
